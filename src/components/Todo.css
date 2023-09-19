@@ -1,0 +1,209 @@
+.todo-container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 11px -7px 104px -24px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 11px -7px 104px -24px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 11px -7px 104px -24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.loading-container {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.todo-title {
+  margin: 0;
+}
+
+.todo-date,
+.todo-hours {
+  color: rgb(170, 165, 165);
+}
+
+.todo-hours-late {
+  color: rgba(207, 8, 8, 0.644);
+}
+
+.date-container {
+  display: flex;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+.todo-description {
+  color: rgb(147, 144, 144);
+  margin: 0;
+  word-wrap: break-word;
+  padding: 10px;
+  border: 1px solid #8080801c;
+  border-radius: 10px;
+}
+
+.delete-modal {
+  padding: 50px;
+  background-color: white;
+  border-radius: 8px;
+  width: 500px;
+  left: 0;
+  top: 25%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+}
+
+.background-cover-delete-modal,
+.background-cover-edit-modal {
+  background-color: rgba(160, 161, 161, 0.368);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.delete-modal p {
+  margin-bottom: 20px;
+}
+
+.delete-modal h1 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.delete-cancel {
+  margin-right: 20px;
+  background-color: none;
+  color: black;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-confirm {
+  background-color: rgb(255, 1, 1);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-confirm:hover {
+  background-color: rgb(195, 2, 2);
+  transition: 0.5s;
+}
+
+.delete-cancel:hover {
+  background-color: rgb(195, 195, 195);
+  transition: 0.5s;
+}
+
+.delete-logic-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-button {
+  transform: scale(1.5);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 1px;
+  filter: invert(22%) sepia(84%) saturate(4027%) hue-rotate(354deg)
+    brightness(95%) contrast(106%);
+  margin-right: 10px;
+}
+
+.delete-button:hover {
+  transform: scale(1.7);
+  transition: 0.5s;
+}
+
+.edit-button {
+  transform: scale(1.5);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 1px;
+  filter: invert(17%) sepia(64%) saturate(4510%) hue-rotate(240deg)
+    brightness(118%) contrast(100%);
+}
+
+.edit-button:hover {
+  transform: scale(1.7);
+  transition: 0.5s;
+}
+
+.edit-todo-update-form {
+  position: fixed;
+  width: 800px;
+  margin: 0 auto;
+  padding: 60px;
+  top: 20%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.edit-todo-update-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-todo-update-form form input {
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  border: 1px solid rgb(215, 216, 223);
+  border-radius: 10px;
+}
+
+.background-cover-edit-modal {
+  background-color: rgba(160, 161, 161, 0.368);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.submit-todo-edit {
+  white-space: nowrap;
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(44, 112, 230);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.delete-todo-edit {
+  white-space: nowrap;
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(254, 0, 0);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.edit-todo-update-form form span {
+  color: red;
+}

@@ -43,9 +43,15 @@
 }
 
 .sub-form input {
-  height: 32px;
-  font-size: 1.3rem;
+  padding: 12px;
+  font-size: 1rem;
   margin-bottom: 30px;
+  border: 1px solid rgb(215, 216, 223);
+  border-radius: 10px;
+}
+
+.sub-form span {
+  color: red;
 }
 
 input:nth-child(6) {
@@ -78,4 +84,21 @@ form button {
 
 .overlay-div:hover {
   cursor: pointer;
+}
+
+.submit-todo {
+  white-space: nowrap;
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(44, 112, 230);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.submit-todo:disabled {
+  background-color: red;
+  opacity: 0.4;
 }

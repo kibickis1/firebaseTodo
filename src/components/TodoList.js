@@ -4,22 +4,13 @@ import SubmissionForm from "./SubmissionForm";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, Route, Routes } from "react-router-dom";
+import ArrowFwd from "../images/ArrowFwd.svg";
 
 function TodoList() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleChange = (event) => {
-    if (event.target.checked) {
-      console.log("✅ Checkbox is checked");
-      //I want to send this check to submission form.js so I could delete all values that are checked
-    } else {
-      console.log("⛔️ Checkbox is NOT checked");
-    }
-    setIsSubscribed((current) => !current);
-  };
 
   useEffect(() => {
     setLoading(true);
@@ -47,40 +38,36 @@ function TodoList() {
     );
   }, []);
 
-  const deleteTodo = (id) => {
-    projectFirestore.collection("todos").doc(id).delete();
-  };
-
   return (
     <div className="todos-container-full">
-      <Link to="submission">
-        <button className="submission-form-button">Add Todo</button>
-      </Link>
-
       {error && <p>{error}</p>}
       {loading ? (
         <h4 className="loading">Loading.....</h4>
       ) : (
         data.map((todo) => (
           // <Link to={`/todos/${todo.id}`}>
-          <Link to={`/todo/${todo.id}`}>
-            <div className="todo" key={todo.id}>
-              <div className="todo-left">
-                <input
-                  type="checkbox"
-                  className="checkbox"
-                  value={isSubscribed}
-                  onChange={handleChange}
-                />
+
+          <div className="todo" key={todo.id}>
+            <div className="todo-left">
+              <div>
                 <h3>{todo.title}</h3>
-                <h4>{todo.description}</h4>
               </div>
-              <div className="todo-rigth">
-                <button>Edit</button>
-                <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+              {/* <h4>{todo.description}</h4> */}
+
+              <div>
+                <p className="date-display">
+                  {new Date(todo.date.seconds * 1000).toDateString()}
+                </p>
               </div>
             </div>
-          </Link>
+            <div className="todo-right">
+              {/* <button>Edit</button>
+                <button onClick={() => deleteTodo(todo.id)}>Delete</button> */}
+              <Link to={`/todo/${todo.id}`}>
+                <img src={ArrowFwd} alt="test"></img>
+              </Link>
+            </div>
+          </div>
         ))
       )}
     </div>

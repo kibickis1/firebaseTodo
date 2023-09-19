@@ -1,0 +1,55 @@
+.submission-form-button {
+  margin: 0 20px 20px 0;
+  background-color: rgb(44, 112, 230);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.home-page-button {
+  background-color: rgb(44, 112, 230);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.home-page-button:hover {
+  cursor: pointer;
+  background-color: rgb(28, 102, 231);
+}
+
+.submission-form-button:hover {
+  cursor: pointer;
+  background-color: rgb(28, 102, 231);
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  flex-direction: row;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin: 0;
+  margin: 0 0 20px 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar-full {
+  width: 1250px;
+  margin: 0 auto;
+}

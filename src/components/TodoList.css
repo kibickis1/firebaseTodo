@@ -1,23 +1,34 @@
 .todo {
   display: flex;
-  width: 1190px;
+  width: 600px;
   height: 74px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
+  box-shadow: -1px 2px 62px -12px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: -1px 2px 62px -12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: -1px 2px 62px -12px rgba(0, 0, 0, 0.22);
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .todo-left {
   display: flex;
-  align-items: center;
-  gap: 60px;
+
+  flex-direction: column;
   margin-left: 35px;
 }
 
-.todo-left h3 {
+.todo-left h3,
+p {
   margin: 0;
+  text-align: left;
+}
+
+.todos-container-full a {
+  text-decoration: none;
+  color: black;
 }
 
 .checkbox {
@@ -57,18 +68,21 @@
   font-size: 5rem;
 }
 
-.submission-form-button {
-  margin: 0 20px 20px 0;
-  background-color: rgb(61, 61, 247);
-  color: white;
-  border: none;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 6px;
+a {
+  width: 30px;
 }
 
-.submission-form-button:hover {
-  cursor: pointer;
-  background-color: rgb(47, 47, 241);
+.todo-right {
+  margin-right: 35px;
+}
+.todo img {
+  padding: 5px;
+  border-radius: 40px;
+}
+.todo img:hover {
+  background-color: #f6f4f4;
+}
+
+.date-display {
+  color: rgb(180, 180, 180);
 }
